@@ -20,6 +20,7 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
+                sh 'pip install --upgrade pip'
                 sh 'pip install --no-cache-dir -r app/requirements.txt'
             }
         }
