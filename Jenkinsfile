@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Clone repo') {
             steps {
-                git 'https://github.com/samihakka/Jenkins-demo-app.git'
+                git branch: 'main', url: 'https://github.com/samihakka/Jenkins-demo-app.git'
             }
         }
 
