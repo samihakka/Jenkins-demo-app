@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Debug Git') {
+            steps {
+                sh 'git remote -v'
+                sh 'git branch -a'
+            }
+        }
         stage('Clone repo') {
             steps {
                 git 'https://github.com/samihakka/Jenkins-demo-app.git'
