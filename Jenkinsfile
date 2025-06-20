@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone repo') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/flask-docker-jenkins-demo.git'
+                git 'https://github.com/samihakka/Jenkins-demo-app.git'
             }
         }
 
