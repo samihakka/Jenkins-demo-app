@@ -18,7 +18,6 @@ pipeline {
             }
         }
 
-        stages {
         stage('Set up venv') {
             steps {
                 sh '''
