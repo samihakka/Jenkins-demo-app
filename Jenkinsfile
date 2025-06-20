@@ -31,7 +31,10 @@ pipeline {
 
         stage('Run tests') {
             steps {
-                sh 'pytest app/test_app.py'
+                sh '''
+                    . venv/bin/activate
+                    pytest app/test_app.py
+                '''
             }
         }
 
