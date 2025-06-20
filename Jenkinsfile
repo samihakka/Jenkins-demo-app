@@ -18,10 +18,15 @@ pipeline {
             }
         }
 
-        stage('Install dependencies') {
+        stages {
+        stage('Set up venv') {
             steps {
-                sh 'pip install --upgrade pip'
-                sh 'pip install --no-cache-dir -r app/requirements.txt'
+                sh '''
+                    python -m venv venv
+                    . venv/bin/activate
+                    pip install --upgrade pip
+                    pip install -r app/requirements.txt
+                '''
             }
         }
 
