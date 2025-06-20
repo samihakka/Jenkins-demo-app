@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.11'  // Python & pip are pre-installed here
+        }
+    }
 
     stages {
         stage('Debug Git') {
